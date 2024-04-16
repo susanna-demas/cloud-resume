@@ -1,0 +1,79 @@
+<html>
+    <head><title>resume</title>
+    <style>
+    body {
+        font-family:Arial;
+        margin-left:15%;
+        margin-right: 15%;
+        margin-top:3.5%;
+    }
+    p,ul{
+        color: rgb(88, 88, 88);
+    }
+    #name{
+    color: blueviolet;
+    }
+    #objective{
+        color:rgb(88, 88, 88);
+    }
+    h3{
+        line-height: 40%;
+    }
+    .education{
+    color:rgb(88, 88, 88);
+    }
+        </style>
+        </head>
+    <body>
+        <div id="container">
+            <p><h2 id="name">Susanna Demas</h2>
+            Phone:+91 8499053494<br>
+            Email: susannademas@gmail.com</p>
+       <h3>Objective:</h3> <p>Detail-oriented and results-driven AWS Cloud Engineer with a passion for 
+            leveraging cloud technologies to drive business innovation. <br>Returning to the workforce after 
+            a career break and eager to contribute expertise in designing, implementing, and managing scalable AWS solutions.</p>
+            <h3>Education:</h3><p>Bachelor of Technology in Computer Science and Engineering<br>
+                Nalla Malla Reddy Engineering college, Hyderabad<br>
+                2017<br></p>
+                <h3>Certifications:</h3>
+                <p> AWS Certified Developer &#8211; Associate</p>
+                <h3>Professional Experience:</h3>
+<p>AWS Cloud Engineer<br>
+Tejoma technologies, Hyderabad<br>
+Oct 2017 - June 2021</p>
+<ul>
+<li> Designed, deployed, and managed AWS cloud infrastructure solutions for diverse clients, ensuring high availability, scalability, and security.</li>
+<li>Automation processes using AWS CloudFormation, Terraform reducing deployment time by 40%.</li>
+<li>Led the migration of on-premises infrastructure to AWS cloud, including data migration, application refactoring, and post-migration optimization.</li>
+<li>Developed and maintained CI/CD pipelines using Jenkins, GitLab CI/CD, and AWS CodePipeline, streamlining the software delivery process.</li>
+<li>and optimized AWS resources using CloudWatch, CloudTrail, and AWS Trusted Advisor, resulting in a 20% reduction in infrastructure costs.</li>
+<li>Conducted security assessments and implemented best practices for securing AWS environments, including IAM policies, VPC configurations, and encryption mechanisms.</li>
+<li>Collaborated with cross-functional teams to gather requirements, design solutions, and provide technical guidance for cloud-related projects.</li>
+<li>Provided technical support and troubleshooting for cloud infrastructure issues, ensuring minimal downtime and optimal performance.</li>
+<li>Mentored junior team members and conducted training sessions on AWS services, best practices, and emerging technologies.</li>
+</ul>
+<h3>Technical Skills:</h3>
+<ul>
+    <li>Programming Languages: Python</li>
+    <li> Cloud Platforms: Amazon Web Services (AWS)</li>
+    <li> Infrastructure as Code: AWS CloudFormation, Terraform</li>
+    <li> CI/CD Tools: Jenkins, GitLab CI/CD, AWS CodePipeline</li>
+    <li> Monitoring & Logging: CloudWatch, CloudTrail</li>
+    <li> Networking: VPC, Route 53, Direct Connect</li>
+    <li>Security: IAM, Security Groups, Encryption</li>
+    <li>Databases: Amazon RDS, DynamoDB</li>
+    <li>Containers: Docker, Amazon ECS</li>
+</ul>
+<div class = "counter-number">views</div>
+        </div>
+        <script>
+            const counter = document.querySelector(".counter-number");
+            async function updateCounter(){
+                let response = await fetch('https://mt4e7dqwhsxpeuxrprn62kzgxm0qppjy.lambda-url.us-east-1.on.aws/')
+                let data = await response.json();
+                counter.innerHTML = 'Views: ${data}';
+            }
+            updateCounter();
+        </script>
+    </body>
+</html>
