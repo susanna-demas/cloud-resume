@@ -27,7 +27,7 @@
     <body>
         <div id="container">
             <p><h2 id="name">Susanna Demas</h2>
-            Phone:+91 8499053494<br>
+            Phone:+91 <br>
             Email: susannademas@gmail.com</p>
        <h3>Objective:</h3> <p>Detail-oriented and results-driven AWS Cloud Engineer with a passion for 
             leveraging cloud technologies to drive business innovation. <br>Returning to the workforce after 
@@ -71,7 +71,8 @@ Oct 2017 - June 2021</p>
             async function updateCounter(){
                 let response = await fetch('https://mt4e7dqwhsxpeuxrprn62kzgxm0qppjy.lambda-url.us-east-1.on.aws/')
                 let data = await response.json();
-                counter.innerHTML = 'Views: ${data}';
+                console.log(data);
+                counter.innerHTML = "views: "+data;
             }
             updateCounter();
         </script>
